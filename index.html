@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Регина — Тату и Искусство</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #fff0f5;
+      --text: #2b2b2b;
+      --accent: #e06ea4;
+      --accent-light: #fdd8e8;
+      --highlight: #fef3f8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Единый стиль изображений-каруселей */
+    .carousel-image {
+      width: 240px;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 12px;
+      scroll-snap-align: center;
+      flex-shrink: 0;
+      background: #eee;
+    }
+
+    /* Кнопки */
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      background-color: transparent;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      position: relative;
+      animation: pulse 2s infinite;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn.filled {
+      background: var(--accent);
+      color: white;
+      animation: none;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(224,110,164, 0.4); }
+      70% { box-shadow: 0 0 0 12px rgba(224,110,164, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(224,110,164, 0); }
+    }
+
+    /* Соцсети */
+    .social-icons {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.6rem;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Hero-блок */
+    .hero {
+      background: url('hero.png') center/cover no-repeat;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      padding: 40px 24px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .glow-rose {
+      color: white;
+      text-shadow:
+        0 0 10px rgba(224,110,164, 0.5),
+        0 0 20px rgba(224,110,164, 0.6),
+        0 0 35px rgba(224,110,164, 0.7);
+    }
+
+    .hero-buttons {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        padding: 32px 20px;
+      }
+
+      .hero h1 {
+        font-size: 1.4rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+      }
+
+      .carousel-image {
+        width: 180px;
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="overlay"></div>
+  <div class="hero-inner">
+    <h1 class="glow-rose">Художник-тату-мастер. <br>Твоя история на коже и холсте.</h1>
+    <p class="glow-rose"><strong>Живу и работаю в Корее, в городе Пентек.</strong></p>
+
+    <a href="https://t.me/Y_reyY" class="btn filled">Проконсультироваться</a>
+
+    <p class="glow-rose" style="margin-top: 20px;">Картины в оригинальном стиле. Художественный реализм, восточная и органическая татуировка.</p>
+
+    <div class="hero-buttons">
+      <a href="#tattoo" class="btn filled">Тату</a>
+      <a href="#paintings" class="btn filled">Картины</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/ll_zvezdochka_ll?igsh=MXZlbTcyZXF5OGQxdA%3D%3D&utm_source=qr" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.tiktok.com/@zvezdochka_tattoo?_t=ZM-8xvbJaVPlck&_r=1" target="_blank"><i class="bi bi-tiktok"></i></a>
+      <a href="https://t.me/Y_reyY" target="_blank"><i class="bi bi-telegram"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- СТОИМОСТЬ -->
+<section style="padding: 80px 20px;">
+  <h2 style="font-size: 2rem; text-align: center; margin-bottom: 40px;">Сколько стоит татуировка?</h2>
+
+  <div style="display: flex; overflow-x: auto; gap: 20px; scroll-snap-type: x mandatory; padding-bottom: 20px; justify-content: center;">
+    <div style="min-width: 240px; background: var(--highlight); padding: 20px; border-radius: 14px; scroll-snap-align: center;">
+      <h4 style="margin-bottom: 10px;">Маленькая тату</h4>
+      <p>от <strong>70 000 вон</strong></p>
+    </div>
+    <div style="min-width: 240px; background: var(--highlight); padding: 20px; border-radius: 14px; scroll-snap-align: center;">
+      <h4 style="margin-bottom: 10px;">Средняя тату</h4>
+      <p>от <strong>150 000 до 500 000 вон</strong></p>
+    </div>
+    <div style="min-width: 240px; background: var(--highlight); padding: 20px; border-radius: 14px; scroll-snap-align: center;">
+      <h4 style="margin-bottom: 10px;">Рукав</h4>
+      <p><strong>200 000 – 400 000 вон</strong> за сессию<br>(нужно 8–10 сессий)</p>
+    </div>
+  </div>
+
+  <p style="text-align:center; max-width:700px; margin: 0 auto;">Цена зависит от размера, сложности, цветности, зоны на теле и времени. На консультации я всегда озвучу ориентир и помогу с выбором.</p>
+</section>
+<!-- ПОРТФОЛИО ТАТУ -->
+<section id="tattoo" style="padding: 80px 20px; max-width: 1080px; margin: auto;">
+  <h2 style="font-size: 2.4rem; text-align: center; margin-bottom: 40px;">Мое портфолио тату</h2>
+  <div style="display: flex; overflow-x: auto; gap: 24px; scroll-snap-type: x mandatory; padding-bottom: 10px; justify-content: center;">
+
+    <a href="painting1.png" data-lightbox="tattoos" data-title="Тату 1">
+      <img src="painting1.png" alt="Тату 1" class="carousel-image" />
+    </a>
+
+    <a href="painting2.png" data-lightbox="tattoos" data-title="Тату 2">
+      <img src="painting2.png" alt="Тату 2" class="carousel-image" />
+    </a>
+
+    <a href="painting3.png" data-lightbox="tattoos" data-title="Тату 3">
+      <img src="painting3.png" alt="Тату 3" class="carousel-image" />
+    </a>
+
+    <a href="painting4.png" data-lightbox="tattoos" data-title="Тату 4">
+      <img src="painting4.png" alt="Тату 4" class="carousel-image" />
+    </a>
+
+    <a href="painting5.png" data-lightbox="tattoos" data-title="Тату 5">
+      <img src="painting5.png" alt="Тату 5" class="carousel-image" />
+    </a>
+
+    <a href="painting6.png" data-lightbox="tattoos" data-title="Тату 6">
+      <img src="painting6.png" alt="Тату 6" class="carousel-image" />
+    </a>
+
+    <a href="painting7.png" data-lightbox="tattoos" data-title="Тату 7">
+      <img src="painting7.png" alt="Тату 7" class="carousel-image" />
+    </a>
+
+    <a href="painting8.png" data-lightbox="tattoos" data-title="Тату 8">
+      <img src="painting8.png" alt="Тату 8" class="carousel-image" />
+    </a>
+
+    <a href="painting9.png" data-lightbox="tattoos" data-title="Тату 9">
+      <img src="painting9.png" alt="Тату 9" class="carousel-image" />
+    </a>
+
+    <a href="painting10.png" data-lightbox="tattoos" data-title="Тату 10">
+      <img src="painting10.png" alt="Тату 10" class="carousel-image" />
+    </a>
+
+    <a href="painting11.png" data-lightbox="tattoos" data-title="Тату 11">
+      <img src="painting11.png" alt="Тату 11" class="carousel-image" />
+    </a>
+
+    <a href="painting12.png" data-lightbox="tattoos" data-title="Тату 12">
+      <img src="painting12.png" alt="Тату 12" class="carousel-image" />
+    </a>
+
+  </div>
+</section>
+
+<!-- ЦИТАТА НА ФОНЕ -->
+<section style="position: relative; width: 100%; height: 60vh; background: url('text.png') center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+  <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.4);"></div>
+  <div style="position: relative; z-index: 2; max-width: 800px; padding: 20px;">
+    <h2 class="glow-rose" style="text-align: center; font-size: 1.8rem;">Творение — молитва без слов. <br>Всё, что рождается из рук, когда-то жило в сердце.</h2>
+  </div>
+</section>
+<!-- ПОДГОТОВКА К СЕАНСУ -->
+<section style="padding: 80px 20px; max-width: 960px; margin: auto;">
+  <h2 style="font-size: 2rem; text-align: center; margin-bottom: 40px;">Как подготовиться к сеансу</h2>
+  <div style="display: flex; flex-direction: column; gap: 24px;">
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-x-circle-fill" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Исключи алкоголь, кофе, энергетики</strong><br>Они усиливают кровообращение и мешают краске</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-droplet-fill" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Позаботься о коже</strong><br>Используй скраб, увлажняющий крем, не травмируй кожу</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-moon-stars-fill" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Выспись и поешь</strong><br>Организм должен быть в стабильном состоянии — это важно</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-water" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Возьми с собой воду</strong><br>Питьевой режим — наш союзник</div>
+    </div>
+  </div>
+</section>
+
+<!-- УХОД ЗА ТАТУ -->
+<section style="padding: 80px 20px; max-width: 960px; margin: auto;">
+  <h2 style="font-size: 2rem; text-align: center; margin-bottom: 40px;">Уход за татуировкой</h2>
+  <div style="display: flex; flex-direction: column; gap: 32px;">
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-hourglass-split" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>За 2–3 дня до сеанса:</strong><br>Исключи алкоголь, кофе, тренировки, травмы кожи — всё это мешает качественной работе.</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-headphones" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>На сеансе:</strong><br>Расслабься, телефон в авиарежим, предупреди близких. Сохраняй спокойствие — мы вместе создаём красоту.</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-stars" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>После сеанса:</strong><br>Фото тату пришли мне для контроля, не чеши, не трогай. Душ — да, ванна, баня, солярий — нет.</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-bandaid-fill" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Если у тебя заживляющая плёнка:</strong><br>Носится 1–4 дня, снимается под тёплой водой. Антисептик и мазь — обязательны.</div>
+    </div>
+  </div>
+</section>
+
+<!-- БЛОК: КАРТИНЫ -->
+<section id="paintings" style="padding: 80px 20px; max-width: 1080px; margin: auto;">
+  <h2 style="font-size: 2.4rem; text-align: center; margin-bottom: 40px;">Мои картины</h2>
+
+  <div class="carousel" style="display: flex; overflow-x: auto; gap: 24px; scroll-snap-type: x mandatory; padding-bottom: 10px; justify-content: center;">
+
+    <a href="cartoon1.png" data-lightbox="paintings" data-title="Картина 1">
+      <img src="cartoon1.png" alt="Картина 1" class="carousel-image" />
+    </a>
+
+    <a href="cartoon2.png" data-lightbox="paintings" data-title="Картина 2">
+      <img src="cartoon2.png" alt="Картина 2" class="carousel-image" />
+    </a>
+
+    <a href="cartoon3.png" data-lightbox="paintings" data-title="Картина 3">
+      <img src="cartoon3.png" alt="Картина 3" class="carousel-image" />
+    </a>
+
+    <a href="cartoon4.png" data-lightbox="paintings" data-title="Картина 4">
+      <img src="cartoon4.png" alt="Картина 4" class="carousel-image" />
+    </a>
+
+    <a href="cartoon5.png" data-lightbox="paintings" data-title="Картина 5">
+      <img src="cartoon5.png" alt="Картина 5" class="carousel-image" />
+    </a>
+
+    <a href="cartoon6.png" data-lightbox="paintings" data-title="Картина 6">
+      <img src="cartoon6.png" alt="Картина 6" class="carousel-image" />
+    </a>
+
+    <a href="cartoon7.png" data-lightbox="paintings" data-title="Картина 7">
+      <img src="cartoon7.png" alt="Картина 7" class="carousel-image" />
+    </a>
+
+    <a href="cartoon8.png" data-lightbox="paintings" data-title="Картина 8">
+      <img src="cartoon8.png" alt="Картина 8" class="carousel-image" />
+    </a>
+
+    <a href="cartoon9.png" data-lightbox="paintings" data-title="Картина 9">
+      <img src="cartoon9.png" alt="Картина 9" class="carousel-image" />
+    </a>
+
+    <a href="cartoon10.png" data-lightbox="paintings" data-title="Картина 10">
+      <img src="cartoon10.png" alt="Картина 10" class="carousel-image" />
+    </a>
+
+    <a href="cartoon11.png" data-lightbox="paintings" data-title="Картина 11">
+      <img src="cartoon11.png" alt="Картина 11" class="carousel-image" />
+    </a>
+
+    <a href="cartoon12.png" data-lightbox="paintings" data-title="Картина 12">
+      <img src="cartoon12.png" alt="Картина 12" class="carousel-image" />
+    </a>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="https://t.me/Y_reyY" class="btn filled">Проконсультироваться по картине</a>
+  </div>
+</section>
+<!-- ЧТО МОЖНО ЗАКАЗАТЬ -->
+<section style="padding: 80px 20px; max-width: 960px; margin: auto;">
+  <h2 style="font-size: 2rem; text-align: center; margin-bottom: 40px;">Что можно заказать</h2>
+  <div style="display: flex; flex-direction: column; gap: 24px;">
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-lightbulb-fill" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Авторскую картину на заказ</strong><br>По твоей идее, фото или эмоции</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-music-note-beamed" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Картину по мотивам</strong><br>Сюжеты на основе стихов, музыки, книг, историй</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-gift-fill" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Картину в подарок</strong><br>Оформим под повод и тематику</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-person-hearts" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Картину с сюжетом о тебе</strong><br>Рассказ о себе или чувствах — я предложу идею</div>
+    </div>
+  </div>
+</section>
+
+<!-- ФОРМАТЫ КАРТИН -->
+<section style="padding: 80px 20px; max-width: 960px; margin: auto;">
+  <h2 style="font-size: 2rem; text-align: center; margin-bottom: 40px;">Форматы картин</h2>
+  <div style="display: flex; flex-direction: column; gap: 24px;">
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-file-earmark-richtext" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>На холсте</strong><br>На подрамнике или в рулоне</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-border-style" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>В рамке</strong><br>Оформленной под интерьер</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-aspect-ratio-fill" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Размер</strong><br>Подбирается индивидуально</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-scroll" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>На свитке</strong><br>Как в древнем Китае, Корее и Японии</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-box-fill" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>3D картины</strong><br>Из глины в рамке</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-journal" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>На искусственной коже</strong><br>С оформлением в рамку</div>
+    </div>
+  </div>
+</section>
+
+<!-- КАК ОФОРМИТЬ ЗАКАЗ -->
+<section style="padding: 80px 20px; max-width: 960px; margin: auto;">
+  <h2 style="font-size: 2rem; text-align: center; margin-bottom: 40px;">Как оформить заказ</h2>
+  <ol style="max-width: 700px; margin: 0 auto; padding-left: 20px; line-height: 1.8;">
+    <li><strong>Напиши в Instagram</strong> или через кнопку на сайте. Опиши:
+      <ul>
+        <li>что хочешь изобразить</li>
+        <li>есть ли фото/референсы</li>
+        <li>примерный размер</li>
+        <li>сроки (если важны)</li>
+      </ul>
+    </li>
+    <li><strong>Я предложу идею</strong> и мы обсудим: цену, сроки, упаковку и доставку.</li>
+    <li><strong>Внеси предоплату</strong> — 50% от суммы проекта.</li>
+    <li><strong>Хочешь — следи за процессом</strong>: я пришлю промежуточные фото.</li>
+    <li><strong>Готово!</strong> После полной оплаты отправляю картину по всему миру. В Корее — доставка бесплатная (1–7 дней), по миру — 1–10 дней.</li>
+  </ol>
+</section>
+
+<!-- КАК ПОНЯТЬ, ЧТО ЗАКАЗАТЬ -->
+<section style="padding: 80px 20px; max-width: 960px; margin: auto;">
+  <h2 style="font-size: 2rem; text-align: center; margin-bottom: 40px;">Как понять, что заказать?</h2>
+  <div style="display: flex; flex-direction: column; gap: 24px;">
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-emoji-smile" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Чувствуешь, но не можешь объяснить</strong><br>— напиши, какие эмоции хочешь вложить</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-heart-pulse-fill" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Любишь мои работы, но не знаешь, что подойдёт</strong><br>— я помогу выбрать</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-people-fill" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Подарок другому</strong><br>— опиши человека или ваши отношения, я предложу</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <i class="bi bi-instagram" style="font-size: 1.5rem; color: var(--accent);"></i>
+      <div><strong>Хочешь арт, как в моём Instagram</strong><br>— пришли, что понравилось</div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="https://www.instagram.com/ll_zvezdochka_ll?igsh=MXZlbTcyZXF5OGQxdA%3D%3D&utm_source=qr" class="btn filled">Написать в Instagram</a>
+  </div>
+</section>
+<!-- ОТЗЫВЫ -->
+<section id="reviews" style="padding: 80px 20px; max-width: 1080px; margin: auto;">
+  <h2 style="font-size: 2rem; text-align: center; margin-bottom: 40px;">Отзывы клиентов</h2>
+  <div style="display: flex; overflow-x: auto; gap: 24px; scroll-snap-type: x mandatory; padding-bottom: 10px; justify-content: center;">
+
+    <a href="review1.png" data-lightbox="reviews" data-title="Отзыв 1">
+      <img src="review1.png" alt="Отзыв 1" class="carousel-image" />
+    </a>
+
+    <a href="review2.png" data-lightbox="reviews" data-title="Отзыв 2">
+      <img src="review2.png" alt="Отзыв 2" class="carousel-image" />
+    </a>
+
+    <a href="review3.png" data-lightbox="reviews" data-title="Отзыв 3">
+      <img src="review3.png" alt="Отзыв 3" class="carousel-image" />
+    </a>
+
+    <a href="review4.png" data-lightbox="reviews" data-title="Отзыв 4">
+      <img src="review4.png" alt="Отзыв 4" class="carousel-image" />
+    </a>
+
+    <a href="review5.png" data-lightbox="reviews" data-title="Отзыв 5">
+      <img src="review5.png" alt="Отзыв 5" class="carousel-image" />
+    </a>
+
+    <a href="review6.png" data-lightbox="reviews" data-title="Отзыв 6">
+      <img src="review6.png" alt="Отзыв 6" class="carousel-image" />
+    </a>
+
+  </div>
+</section>
+
+<!-- ПОДВАЛ -->
+<footer style="text-align: center; padding: 40px 20px; font-size: 0.9rem; color: #888; margin-top: 60px;">
+  © Регина — тату и искусство. Все права защищены.
+</footer>
+
+</body>
+</html>
